@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>가위바위보 게임</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        .game-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .game-images img {
+            margin: 0 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .game-results {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .game-results p {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>가위바위보 게임</h1>
+
+<div class="game-images">
+    <img th:if="${myResult.result} == 1" src="/images/scissors.jpeg" alt="가위">
+    <img th:if="${myResult.result} == 2" src="/images/rock.jpeg" alt="바위">
+    <img th:if="${myResult.result} == 3" src="/images/paper.jpeg" alt="보">
+</div>
+
+<div class="game-results">
+    <p>필립</p>
+    <p>VS</p>
+    <p>박스터</p>
+</div>
+
+<div class="game-images">
+    <img th:if="${otherResult.result} == 1" src="/images/scissors.jpeg" alt="가위">
+    <img th:if="${otherResult.result} == 2" src="/images/rock.jpeg" alt="바위">
+    <img th:if="${otherResult.result} == 3" src="/images/paper.jpeg" alt="보">
+</div>
+</body>
+</html>
