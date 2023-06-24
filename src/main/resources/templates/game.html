@@ -41,9 +41,9 @@
 <h1>가위바위보 게임</h1>
 
 <div class="game-images">
-    <img th:if="${myResult.result} == 1" src="/images/scissors.jpeg" alt="가위">
-    <img th:if="${myResult.result} == 2" src="/images/rock.jpeg" alt="바위">
-    <img th:if="${myResult.result} == 3" src="/images/paper.jpeg" alt="보">
+    <div th:if="${myResult.result} == 1">가위</div>
+    <div th:if="${myResult.result} == 2">바위</div>
+    <div th:if="${myResult.result} == 3">보</div>
 </div>
 
 <div class="game-results">
@@ -53,9 +53,9 @@
 </div>
 
 <div class="game-images">
-    <img th:if="${otherResult.result} == 1" src="/images/scissors.jpeg" alt="가위">
-    <img th:if="${otherResult.result} == 2" src="/images/rock.jpeg" alt="바위">
-    <img th:if="${otherResult.result} == 3" src="/images/paper.jpeg" alt="보">
+    <div th:if="${otherResult.result} == 1">가위</div>
+    <div th:if="${otherResult.result} == 2">바위</div>
+    <div th:if="${otherResult.result} == 3">보</div>
 </div>
 </body>
 </html>
