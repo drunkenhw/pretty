@@ -1,8 +1,10 @@
 package com.example.demo;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,6 +18,7 @@ public class PrettyController {
         return "index";
     }
 
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     @GetMapping("/game")
     public String game(Model model) {
         LocalDateTime localDateTime = LocalDateTime.now();
