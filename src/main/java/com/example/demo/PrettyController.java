@@ -17,8 +17,8 @@ public class PrettyController {
     @GetMapping("/game")
     public String game(Model model) {
         Random random = new Random();
-        int i = random.nextInt(3)+1;
-        int i2 = random.nextInt(3)+1;
+        int i = random.nextInt(3) + 1;
+        int i2 = random.nextInt(3) + 1;
         GameDto myResult = new GameDto(i);
         GameDto otherResult = new GameDto(i2);
         model.addAttribute("myResult", myResult);
