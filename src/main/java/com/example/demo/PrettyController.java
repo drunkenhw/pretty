@@ -16,6 +16,7 @@ public class PrettyController {
 
     @GetMapping("/game")
     public String game(Model model) {
+        System.out.println("접속 되었습니다~~~~~~~~!!");
         Random random = new Random();
         int i = random.nextInt(3) + 1;
         int i2 = random.nextInt(3) + 1;
