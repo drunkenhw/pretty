@@ -23,7 +23,7 @@ public class PrettyController {
         LocalDateTime localDateTime = LocalDateTime.now();
         String format = localDateTime.format(DateTimeFormatter.ISO_LOCAL_TIME);
         System.out.println(format +"접속 되었습니다~~~~~~~~~~~!!");
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         Random random = new Random();
         int i = random.nextInt(3) + 1;
         int i2 = random.nextInt(3) + 1;
