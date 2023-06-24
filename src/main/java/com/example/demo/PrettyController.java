@@ -18,7 +18,7 @@ public class PrettyController {
         return "index";
     }
 
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @GetMapping("/game")
     public String game(Model model) {
         LocalDateTime localDateTime = LocalDateTime.now();
